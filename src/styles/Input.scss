@@ -1,0 +1,29 @@
+.title{
+    color: rgb(167, 161, 163);
+    margin-left: 120px;
+    font-size: 25px;
+}
+
+.myInput{
+    border: none;
+    height: 50px;
+    width: 400px;
+    color: rgb(204,204,204);
+    font-size: 20px;
+}
+
+.myInput:focus{
+    outline: none;
+    color: rgb(116, 111, 113);
+}
+
+.counter{
+    background-color: white;
+    color: rgb(156,156,156);
+    padding-left: 1%;
+    border: none;
+    height: 25px;
+    width: 400px;
+    font-size: 10px;
+    
+}

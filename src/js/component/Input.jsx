@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import Item from "./Item.jsx";
+
+let counter = 0;
 
 const Input = props => {
 	const [inputValue, setInputValue] = React.useState("");
@@ -16,35 +19,41 @@ const Input = props => {
 			let myList = uList;
 			myList.push(event.target.value);
 			setList(myList);
-			setInputValue(""); // PREGUNTAR A MANU
+			counter++;
+			setInputValue("");
 		}
 	};
-	// <i class="fas fa-trash-alt"></i>
+
 	const deleteTask = index => {
 		let myList = uList;
 		myList.splice(index, 1);
+		counter--;
 		setList(myList);
 	};
 
-	const listHTML = uList.map((task, i) => {
-		return (
-			<>
-				<li key={i}>{task}</li>
-				<button onClick={e => deleteTask(i)}>x</button>
-			</>
-		);
-	});
-
 	return (
 		<>
-			<input
-				type="text"
-				onChange={e => validateInput(e)}
-				value={inputValue}
-				onKeyUp={e => enterInput(e)}
-				placeholder={props.myPlaceHolder}
-			/>
-			<ul>{listHTML}</ul>
+			<div className="container">
+				<div className="title">TO DO List</div>
+				<input
+					className="row myInput"
+					type="text"
+					onChange={e => validateInput(e)}
+					value={inputValue}
+					onKeyUp={e => enterInput(e)}
+					placeholder={props.myPlaceHolder}
+				/>
+
+				{uList.map((task, i) => (
+					<Item key={i} name={task} clic={deleteTask} />
+				))}
+
+				<div className="row counter">
+					{counter > 0
+						? counter + " item left"
+						: "No tasks, add a task"}
+				</div>
+			</div>
 		</>
 	);
 };

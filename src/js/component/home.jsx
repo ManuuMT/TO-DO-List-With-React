@@ -4,7 +4,7 @@ import Input from "./Input.jsx";
 const Home = () => {
 	return (
 		<>
-			<Input myPlaceHolder="Write something..." />
+			<Input myPlaceHolder="What needs to be done?" />
 		</>
 	);
 };
