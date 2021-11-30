@@ -6,7 +6,7 @@ const Input = props => {
 	// HOOKS
 	// Use state with the value of my input
 	const [inputValue, setInputValue] = React.useState("");
-	// Use state with the list of tasks
+	// Use state with the task list
 	const [uList, setList] = React.useState([]);
 
 	//FUNCTIONS
@@ -58,7 +58,7 @@ const Input = props => {
 					onKeyDown={enterInput}
 					placeholder={props.myPlaceHolder}
 				/>
-				{/* List of tasks */}
+				{/* Task list */}
 				{uList.map((task, i) => (
 					<Item key={i} name={task} clic={deleteTask} />
 				))}
