@@ -3,7 +3,8 @@
 
 ## 💡 About this project
 
-TO DO List with 2 simple functions: add or remove a task. The technologies used are HTML5, CSS3, SCSS, Node, Javascript, Bootstrap, and React.
+TO DO List that allows you to perform 2 simple actions: add or remove a task. 
+The technologies used are HTML5, CSS3, SASS, Node, Javascript, Bootstrap, and React.
 
 
 ## 1. 😵 How to start
