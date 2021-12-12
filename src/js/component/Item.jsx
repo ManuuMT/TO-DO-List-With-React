@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Item = props => {
 	// Every task on my task list
-    return (
+	return (
 		<div className="row taskList d-flex align-items-center">
 			<div className="col task">{props.name}</div>
 			<div className="col" onClick={props.clic}>
