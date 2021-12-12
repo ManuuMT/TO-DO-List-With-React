@@ -1,15 +1,7 @@
-// Import React
 import React from "react";
 import ReactDOM from "react-dom";
-
-// Import Bootstrap
 import "bootstrap";
-
-// Styles
 import "../styles/index.scss";
+import Input from "./component/Input.jsx";
 
-// Components
-import Home from "./component/home.jsx";
-
-// Render the application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+ReactDOM.render(<Input />, document.querySelector("#app"));
